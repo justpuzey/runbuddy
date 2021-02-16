@@ -1,0 +1,38 @@
+/* remove browser defaults globally */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* comment */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #39a6b2;
+}
+/* apply styles to header */
+header{
+    padding: 20px 35px;
+    background-color: #39a6b2;
+}
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    display: inline; /* converts h1 from block element to inline element to allow nav links to be displayd on same line*/
+}
+header a {
+    text-decoration: none;/* Removes the hyperlink underline */
+    color: #fce138; 
+}
+header nav {
+    float: right; /* moves nav links to right of header */
+    margin: 7px 0; /* sets top & bottom margin of 7px and 0px margin form left and right */
+}
+header nav ul li {
+    display: inline; /* converts li from block element to inline element which allows for horizontal display */
+}
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
