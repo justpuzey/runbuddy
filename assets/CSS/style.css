@@ -12,11 +12,17 @@ body {
 /* HEADER / NAV BAR STYLES START */
 
 header {
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 35px;
+  background-color: #39a6b2;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px 35px;
-  background-color: #39a6b2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 header h1 {
@@ -24,6 +30,7 @@ header h1 {
   margin: 0;
   font-size: 36px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -47,16 +54,18 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* HEADER / NAVBAR STYLES END */
 
 /* FOOTER STYLES START */
 footer {
-  justify-content: space-between;
-  flex-wrap: wrap;
   background: #fce138;
   padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -83,12 +92,14 @@ section {
 
 /* HERO STYLES START */
 .hero {
+  background-image: url("../images/hero-bg.jpg");
+  background-attachment: fixed;
+  background-position: 80%;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-image: url("../images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
   align-items: flex-start;
 }
 
@@ -99,6 +110,7 @@ section {
   color: #fff;
   font-size: 18px;
   line-height: 1.2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-cta h2 {
@@ -109,7 +121,8 @@ section {
 
 .hero-form {
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgba(252, 225, 56, 0.8);
+  border-radius: 15px;
   padding: 20px;
   color: #024e76;
   width: 40%;
@@ -132,6 +145,13 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10x;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -144,18 +164,19 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10x;
 }
 /* HERO STYLES END */
 
 /* SECTION TITLE STYLES START */
 .section-title {
+  font-size: 48px;
+  border-bottom: 3px solid;
+  color: #024e76;
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto 35px auto;
   width: 50%;
-  font-size: 48px;
-  border-bottom: 3px solid;
-  color: #024e76;
 }
 
 .primary-border {
@@ -170,12 +191,12 @@ section {
 /* WHAT WE DO STYLES */
 
 .intro p {
-  text-align: center;
   line-height: 1.7;
   color: #39a6b2;
   width: 80%;
   margin: 0 auto;
   font-size: 20px;
+  text-align: center;
 }
 /* WHAT YOU DO STYLES END */
 
@@ -194,6 +215,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
+
 .step h3 {
   color: #024e76;
   font-size: 46px;
@@ -212,23 +234,25 @@ section {
   margin-right: 20px;
 }
 
+.step-img img {
+  max-width: 100%;
+}
+
 .step-text {
   flex: 12;
 }
 
-.step-img img {
-  max-width: 100%;
-}
-.steps-text p {
+.step-text p {
   color: #39a6b2;
   font-size: 18px;
 }
 
-.steps-text h4 {
+.step-text h4 {
   font-size: 26px;
   line-height: 1.5;
   color: #024e76;
 }
+
 /* WHAT YOU DO STYLES END */
 
 /* MEET THE TRAINERS START */
@@ -239,11 +263,12 @@ section {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .trainer {
   margin: 20px;
+  flex: 1;
   background: #024e76;
   color: #fce138;
-  flex: 1;
 }
 
 .trainer img {
@@ -311,11 +336,7 @@ section {
   font-style: normal;
 }
 
-.contact-info a {
-  color: #fce138;
-}
-
-.ccontact-form input,
+.contact-form input,
 .contact-form textarea {
   border: 1px solid #024e76;
   display: block;
@@ -325,17 +346,29 @@ section {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10x;
 }
 
 .contact-form button {
-  width: 1000%;
+  width: 100%;
   border: none;
   background: #fce138;
   color: #024e76;
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10x;
 }
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
+}
+
+.contact-info a {
+  color: #fce138;
+}
+
 /* REACH OUT STYLES END */
 
 /* UTILITIES */
@@ -356,6 +389,7 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
@@ -373,6 +407,13 @@ section {
     font-size: 20px;
   }
 
+  header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+  }
+
   footer h2,
   footer div {
     text-align: center;
@@ -386,6 +427,10 @@ section {
 
   .hero-cta {
     text-align: center;
+  }
+
+  .hero-form button:hover {
+    background-color: #39a6b2;
   }
 
   .section-title {
@@ -455,6 +500,7 @@ section {
   .contact-info > * {
     flex: 0 100%;
   }
+
   .contact-form {
     order: 3;
   }
